@@ -8,7 +8,7 @@ const TopBar = () => {
     <div className="flex items-center justify-between px-4 h-[var(--topbar-h)]">
       {/* Logo */}
       <div className="flex items-center">
-        <span className="text-xl font-bold text-white">NewsAct</span>
+        <span className="text-xl font-bold text-white">AgentStore</span>
       </div>
 
       {/* Dropdown Menu */}

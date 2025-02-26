@@ -42,6 +42,8 @@ frontend/lerna-debug.log*
 
 # Backend - Python + FastAPI
 ## Python virtual environment
+venv/
+env/
 backend/venv/
 backend/env/
 
