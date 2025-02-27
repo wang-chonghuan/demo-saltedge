@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import CognitoSignup from '../components/agents/CognitoSignup';
+import CognitoSignin from '../components/agents/CognitoSignin';
 
 const Agents = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showSignupModal, setShowSignupModal] = useState(false);
+  const [showSigninModal, setShowSigninModal] = useState(false);
 
   const agentItems = [
     {
       title: "Cognito Signup",
       preview: "Test Cognito user registration functionality",
+    },
+    {
+      title: "Cognito Signin",
+      preview: "Test Cognito user login functionality",
     },
     {
       title: "Financial Advisor",
@@ -36,6 +42,8 @@ const Agents = () => {
   const handleAgentClick = (title: string) => {
     if (title === "Cognito Signup") {
       setShowSignupModal(true);
+    } else if (title === "Cognito Signin") {
+      setShowSigninModal(true);
     } else {
       console.log(`Selected agent: ${title}`);
     }
@@ -60,6 +68,12 @@ const Agents = () => {
       {showSignupModal && (
         <CognitoSignup
           onClose={() => setShowSignupModal(false)}
+        />
+      )}
+
+      {showSigninModal && (
+        <CognitoSignin
+          onClose={() => setShowSigninModal(false)}
         />
       )}
     </div>

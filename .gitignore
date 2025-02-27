@@ -40,30 +40,35 @@ frontend/yarn-error.log*
 frontend/pnpm-debug.log*
 frontend/lerna-debug.log*
 
+## environment variables
+frontend/.env*
+
 # Backend - Python + FastAPI
 ## Python virtual environment
 venv/
 env/
-backend/venv/
-backend/env/
+.venv/
+.env/
 
 ## Python cache files
-backend/__pycache__/
-backend/**/__pycache__/
-backend/*.py[cod]
-backend/*$py.class
-backend/.pytest_cache/
-backend/.coverage
-backend/htmlcov/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
 
 ## Python distribution / packaging
-backend/dist/
-backend/build/
-backend/*.egg-info/
+dist/
+build/
+*.egg-info/
 
 ## Python logs
-backend/logs/
-backend/*.log
+logs/
+*.log
+
+## environment variables
+backend/.env*
 
 # Temporary files
 *.swp
